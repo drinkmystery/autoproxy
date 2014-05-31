@@ -470,9 +470,5 @@ function getWeakReference(/**nsISupports*/ node) /**nsIWeakReference*/
  */
 function getReferencee(/**nsIWeakReference*/ weakRef) /**nsISupports*/
 {
-  try {
-    return weakRef.QueryReferent(Ci.nsISupports);
-  } catch (e) {
-    return null;
-  }
+  return weakRef;
 }
